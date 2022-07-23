@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - .:/app4
+      - static_volume:/app4/staticfiles
+      - media_volume:/app4/mediafiles   
+    expose:
+      - 8000
+
+  nginx:
+    build:
+      context: ./frontend
+    ports:
+      - "80:80"
+    volumes:
+      - static_volume:/app4/staticfiles
+      - media_volume:/app4/mediafiles    
+    depends_on:
+      - backend
+
+
+volumes:
+  static_volume:
+  media_volume:
+
+
