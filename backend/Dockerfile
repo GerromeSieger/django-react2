@@ -2,7 +2,7 @@ FROM python:3.9-alpine
 
 WORKDIR /app4
 
-COPY . /app4
+COPY ./backend /app4
 
 COPY requirements.txt ./
 
