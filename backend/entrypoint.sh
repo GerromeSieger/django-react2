@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-cd /app4/backend
+#cd /app4/backend
 
 python3 manage.py migrate
 
