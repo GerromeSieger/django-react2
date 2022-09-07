@@ -15,7 +15,7 @@ services:
   nginx:
     #build:
     #  context: ./frontend
-    image: gerrome/django-react3_backend:1
+    image: gerrome/django-react3_nginx:1
     ports:
       - "80:80"
     volumes:
