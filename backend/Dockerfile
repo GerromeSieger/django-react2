@@ -8,6 +8,6 @@ COPY requirements.txt ./
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-COPY entrypoint.sh /app4/backend
+COPY ./entrypoint.sh /
 
 ENTRYPOINT ["sh", "/entrypoint.sh"]
