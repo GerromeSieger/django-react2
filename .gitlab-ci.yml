@@ -17,14 +17,6 @@ test_demo:
     - yarn install 
     - yarn jest
 
-build_vuejs:
-  stage: build
-  image: node:16.13.1-alpine
-  script:
-    - cd frontend
-    - npm install
-    - npm run build
-
 build_django:
   stage: build-docker
   image: docker:20.10.16
