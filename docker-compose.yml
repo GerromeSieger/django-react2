@@ -2,9 +2,9 @@ version: "3.8"
 
 services:
   backend:
-    build:
-      context: ./backend
-    #image: gerrome/django-react3_backend:1
+    #build:
+    #  context: ./backend
+    image: gerrome/django-react3_backend:1
     volumes:
       - .:/app4
       - static_volume:/app4/staticfiles
