@@ -9,13 +9,13 @@ test_demo:
   script:
     - echo "testing testing"
 
-.test_vuejs:
+test_vuejs:
   stage: test
   image: node:16.13.1-alpine
   script:
     - cd frontend
-    - yarn install 
-    - yarn jest
+    - npm install 
+    - npm run test
 
 build_django:
   stage: build-docker
